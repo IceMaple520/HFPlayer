@@ -15,6 +15,7 @@
 		602F03F11E6EB3DD007BD658 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 602F03EF1E6EB3DD007BD658 /* LaunchScreen.storyboard */; };
 		602F03FC1E6EB3DD007BD658 /* HFAVPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 602F03FB1E6EB3DD007BD658 /* HFAVPlayerTests.m */; };
 		602F04071E6EB3DD007BD658 /* HFAVPlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 602F04061E6EB3DD007BD658 /* HFAVPlayerUITests.m */; };
+		602F04161E6EB3EE007BD658 /* HPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 602F04151E6EB3EE007BD658 /* HPlayerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		602F04021E6EB3DD007BD658 /* HFAVPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HFAVPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		602F04061E6EB3DD007BD658 /* HFAVPlayerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFAVPlayerUITests.m; sourceTree = "<group>"; };
 		602F04081E6EB3DD007BD658 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		602F04141E6EB3EE007BD658 /* HPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPlayerView.h; sourceTree = "<group>"; };
+		602F04151E6EB3EE007BD658 /* HPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPlayerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				602F03E51E6EB3DD007BD658 /* AppDelegate.m */,
 				602F03E71E6EB3DD007BD658 /* ViewController.h */,
 				602F03E81E6EB3DD007BD658 /* ViewController.m */,
+				602F04141E6EB3EE007BD658 /* HPlayerView.h */,
+				602F04151E6EB3EE007BD658 /* HPlayerView.m */,
 				602F03EA1E6EB3DD007BD658 /* Main.storyboard */,
 				602F03ED1E6EB3DD007BD658 /* Assets.xcassets */,
 				602F03EF1E6EB3DD007BD658 /* LaunchScreen.storyboard */,
@@ -207,6 +212,7 @@
 				TargetAttributes = {
 					602F03DD1E6EB3DD007BD658 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 6QQSR6VRRS;
 						ProvisioningStyle = Automatic;
 					};
 					602F03F61E6EB3DD007BD658 = {
@@ -273,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				602F04161E6EB3EE007BD658 /* HPlayerView.m in Sources */,
 				602F03E91E6EB3DD007BD658 /* ViewController.m in Sources */,
 				602F03E61E6EB3DD007BD658 /* AppDelegate.m in Sources */,
 				602F03E31E6EB3DD007BD658 /* main.m in Sources */,
@@ -422,6 +429,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6QQSR6VRRS;
 				INFOPLIST_FILE = HFAVPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = IceMaple.HFAVPlayer;
@@ -433,6 +441,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6QQSR6VRRS;
 				INFOPLIST_FILE = HFAVPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = IceMaple.HFAVPlayer;

@@ -8,7 +8,7 @@
 
 #import "HPlayerView.h"
 
-#define COLORFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000)>>16))/255.0 green:((float)((rgbValue & 0xFF00)>>8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+#define COLORFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000)>>16))/255.0 green:((float)((rgbValue & 0xFF00)>>8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:0.5]
 
 #define __WIDTH   [UIScreen mainScreen].bounds.size.width
 #define __HEIGHT  [UIScreen mainScreen].bounds.size.height
@@ -56,7 +56,7 @@
 - (void)creatUI
 {
     self.playButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.playButton setImage:[UIImage imageNamed:@"Player_Stop@2x.png"] forState:UIControlStateNormal];
+    [self.playButton setImage:[UIImage imageNamed:@"Player_Stop.png"] forState:UIControlStateNormal];
     [self.playButton addTarget:self action:@selector(playAction:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:self.playButton];
 
@@ -78,14 +78,14 @@
     
     
     self.slider = [[UISlider alloc] init];
-    [self.slider setThumbImage:[UIImage imageNamed:@"MoviePlayer_Slider@2x.png"] forState:UIControlStateNormal];
+    [self.slider setThumbImage:[UIImage imageNamed:@"MoviePlayer_Slider.png"] forState:UIControlStateNormal];
     [self.barView addSubview:self.slider];
     
     [self.slider addTarget:self action:@selector(sliderDown) forControlEvents:UIControlEventTouchDown];
     [self.slider addTarget:self action:@selector(sliderUp) forControlEvents:UIControlEventTouchUpInside];
 
     self.fullButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.fullButton setImage:[UIImage imageNamed:@"Player_max@2x.png"] forState:UIControlStateNormal];
+    [self.fullButton setImage:[UIImage imageNamed:@"Player_max.png"] forState:UIControlStateNormal];
     [self.fullButton addTarget:self action:@selector(fullScreenAction) forControlEvents:UIControlEventTouchUpInside];
     [self.barView addSubview:self.fullButton];
     
@@ -135,7 +135,7 @@
     if (self.fullButton.selected) {
         [self interfaceOrientation:UIInterfaceOrientationLandscapeRight];
 
-        [self.fullButton setImage:[UIImage imageNamed:@"Player_min@2x.png"] forState:UIControlStateNormal];
+        [self.fullButton setImage:[UIImage imageNamed:@"Player_min.png"] forState:UIControlStateNormal];
         self.frame = [UIScreen mainScreen].bounds;
         if (_delegate) {
             [self.delegate changeMaxView:self];
@@ -143,7 +143,7 @@
     }else{
         [self interfaceOrientation:UIInterfaceOrientationPortrait];
 
-        [self.fullButton setImage:[UIImage imageNamed:@"Player_max@2x.png"] forState:UIControlStateNormal];
+        [self.fullButton setImage:[UIImage imageNamed:@"Player_max.png"] forState:UIControlStateNormal];
 
         self.frame = self.rect;
         if (_delegate) {
@@ -171,7 +171,7 @@
     
     if (self.isPlayer && !self.playButton.selected) {
         [self.player play];
-        [self.playButton setImage:[UIImage imageNamed:@"Player_Play@2x.png"] forState:UIControlStateSelected];
+        [self.playButton setImage:[UIImage imageNamed:@"Player_Play.png"] forState:UIControlStateSelected];
         self.playButton.alpha = 0;
         self.barView.hidden = NO;
     }else{
@@ -256,7 +256,7 @@
         }
     }else{
         [self.player play];
-        [self.playButton setImage:[UIImage imageNamed:@"Player_Play@2x.png"] forState:UIControlStateSelected];
+        [self.playButton setImage:[UIImage imageNamed:@"Player_Play.png"] forState:UIControlStateSelected];
         self.playButton.alpha = 0;
         self.isFirstButton = YES;
         self.isClickScreen = YES;
